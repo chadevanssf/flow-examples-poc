@@ -1,0 +1,29 @@
+<design:component label="Flow in Modal from Button Group">
+	<design:attribute name="recordId" label="Record Id" description="Set using '{!recordId}' when used from community"/>
+	<design:attribute name="refreshRecord" label="Refresh Record" description="Call Refresh Record when flow finishes"/>
+	<design:attribute name="refreshRecordDelay" label="Refresh Record Delay" description="Delay from when flow finishes to the refresh record is called"/>
+    
+	<design:attribute name="buttonLabel_1" label="1-Button Label"/>
+    <design:attribute name="buttonVariant_1" label="1-Button Variant" datasource="base,neutral,brand,destructive,inverse,success" />
+	<design:attribute name="modalTitle_1" label="1-Modal Title"/>
+	<design:attribute name="modalSize_1" label="1-Modal Size" datasource="small,medium,large"/>
+	<design:attribute name="flowName_1" label="1-Flow Name (API)"/>
+	<design:attribute name="showHeader_1" label="1-Show Header"/>
+	<design:attribute name="showFooter_1" label="1-Show Footer"/>
+
+	<design:attribute name="buttonLabel_2" label="2-Button Label"/>
+    <design:attribute name="buttonVariant_2" label="2-Button Variant" datasource="base,neutral,brand,destructive,inverse,success" />
+	<design:attribute name="modalTitle_2" label="2-Modal Title"/>
+	<design:attribute name="modalSize_2" label="2-Modal Size" datasource="small,medium,large"/>
+	<design:attribute name="flowName_2" label="2-Flow Name (API)"/>
+	<design:attribute name="showHeader_2" label="2-Show Header"/>
+	<design:attribute name="showFooter_2" label="2-Show Footer"/>
+
+	<design:attribute name="buttonLabel_3" label="3-Button Label"/>
+    <design:attribute name="buttonVariant_3" label="3-Button Variant" datasource="base,neutral,brand,destructive,inverse,success" />
+	<design:attribute name="modalTitle_3" label="3-Modal Title"/>
+	<design:attribute name="modalSize_3" label="3-Modal Size" datasource="small,medium,large"/>
+	<design:attribute name="flowName_3" label="3-Flow Name (API)"/>
+	<design:attribute name="showHeader_3" label="3-Show Header"/>
+	<design:attribute name="showFooter_3" label="3-Show Footer"/>
+</design:component>

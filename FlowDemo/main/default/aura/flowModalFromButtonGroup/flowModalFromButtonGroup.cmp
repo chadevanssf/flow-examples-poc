@@ -1,0 +1,72 @@
+<!--
+/*
+* Copyright (c) 2020, salesforce.com, inc.
+* All rights reserved.
+* SPDX-License-Identifier: BSD-3-Clause
+* For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+*/
+-->
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global">
+    <!--### Public/Global Attributes ###-->
+    <!-- common -->
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="refreshRecord" type="Boolean" default="false" access="global" />
+    <aura:attribute name="refreshRecordDelay" type="Integer" default="1000" access="global" />
+
+	<!-- button 1 -->
+    <aura:attribute name="buttonLabel_1" type="String" access="global" />
+    <aura:attribute name="buttonVariant_1" type="String" access="global" />
+    <aura:attribute name="modalTitle_1" type="String" access="global" />
+    <aura:attribute name="modalSize_1" type="String" default="small" access="global" />
+    <aura:attribute name="closeButtonLabel_1" type="String" access="global" />
+    <aura:attribute name="closeButtonVariant_1" type="String" access="global" />
+    <aura:attribute name="flowName_1" type="String" access="global" />
+    <aura:attribute name="showHeader_1" type="Boolean" default="true" access="global" />
+    <aura:attribute name="showFooter_1" type="boolean" default="false" access="global" />
+    
+	<!-- button 2 -->
+    <aura:attribute name="buttonLabel_2" type="String" access="global" />
+    <aura:attribute name="buttonVariant_2" type="String" access="global" />
+    <aura:attribute name="modalTitle_2" type="String" access="global" />
+    <aura:attribute name="modalSize_2" type="String" default="small" access="global" />
+    <aura:attribute name="closeButtonLabel_2" type="String" access="global" />
+    <aura:attribute name="closeButtonVariant_2" type="String" access="global" />
+    <aura:attribute name="flowName_2" type="String" access="global" />
+    <aura:attribute name="showHeader_2" type="Boolean" default="true" access="global" />
+    <aura:attribute name="showFooter_2" type="boolean" default="false" access="global" />
+    
+	<!-- button 3 -->
+    <aura:attribute name="buttonLabel_3" type="String" access="global" />
+    <aura:attribute name="buttonVariant_3" type="String" access="global" />
+    <aura:attribute name="modalTitle_3" type="String" access="global" />
+    <aura:attribute name="modalSize_3" type="String" default="small" access="global" />
+    <aura:attribute name="closeButtonLabel_3" type="String" access="global" />
+    <aura:attribute name="closeButtonVariant_3" type="String" access="global" />
+    <aura:attribute name="flowName_3" type="String" access="global" />
+    <aura:attribute name="showHeader_3" type="Boolean" default="true" access="global" />
+    <aura:attribute name="showFooter_3" type="boolean" default="false" access="global" />
+    
+    <lightning:buttonGroup>
+        <c:flowModalFromButton recordId="{!v.recordId}"
+                               buttonLabel="{!v.buttonLabel_1}"
+                               buttonVariant="{!v.buttonVariant_1}"
+                               modalTitle="{!v.modalTitle_1}"
+                               flowName="{!v.flowName_1}"
+                               showFooter="{!v.showFooter_1}"/>
+        
+        <c:flowModalFromButton recordId="{!v.recordId}"
+                               buttonLabel="{!v.buttonLabel_2}"
+                               buttonVariant="{!v.buttonVariant_2}"
+                               modalTitle="{!v.modalTitle_2}"
+                               flowName="{!v.flowName_2}"
+                               showFooter="{!v.showFooter_2}"/>
+        
+        <c:flowModalFromButton recordId="{!v.recordId}"
+                               buttonLabel="{!v.buttonLabel_3}"
+                               buttonVariant="{!v.buttonVariant_3}"
+                               modalTitle="{!v.modalTitle_3}"
+                               flowName="{!v.flowName_3}"
+                               showFooter="{!v.showFooter_3}"/>
+    </lightning:buttonGroup>
+    
+</aura:component>

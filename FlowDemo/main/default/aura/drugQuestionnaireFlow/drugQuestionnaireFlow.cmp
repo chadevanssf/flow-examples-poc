@@ -1,0 +1,33 @@
+<aura:component implements="lightning:availableForFlowScreens,force:hasRecordId,force:hasSObjectName" controller="drugQuestionnaireController" access="global">
+    
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="sObjectName" type="String" />
+    <aura:attribute name="progressive" type="Boolean" />
+    
+    <aura:attribute name="mycase" type="Case"/>
+    <aura:attribute name="mydrudg" type="Drug__c"/>
+    <aura:attribute name="myquestions" type="Question_Response__c[]"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!--<aura:if isTrue="{! not(v.progressive) }">-->
+        <aura:iteration items="{!v.myquestions}" var="question" indexVar="currPos">
+            <lightning:tile label="{!question.Question__r.Name}">
+                <p class="slds-truncate" title="Prompt">{!question.Question__r.Prompt__c}</p>
+                <p><lightning:input name="input1" label="Response" value="{!question.Response__c}" /></p>
+            </lightning:tile>
+        </aura:iteration>
+        <!--<aura:set attribute="else">
+            <aura:iteration items="{!v.myquestions}" var="question" indexVar="currPos">
+                
+                <aura:if isTrue="{! question.showQuestion }">
+                    <lightning:tile label="{!question.Question__r.Name}">
+                        <p class="slds-truncate" title="Prompt">{!question.Question__r.Prompt__c}</p>
+                        <p><lightning:input name="{!currPos}" label="Response" value="{!question.Response__c}" oncommit="{!v.handleResponseChange}" /></p>
+                    </lightning:tile>
+                </aura:if> 
+            </aura:iteration>
+        </aura:set>-->
+    <!--</aura:if>-->
+    
+</aura:component>

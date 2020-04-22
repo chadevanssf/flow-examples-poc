@@ -1,0 +1,3 @@
+<design:component label="Drug Questionnaire">
+    <design:attribute name="recordId" label="Case Id" />
+</design:component>

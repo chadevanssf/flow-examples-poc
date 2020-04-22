@@ -1,0 +1,42 @@
+<!--
+/*
+* Copyright (c) 2020, salesforce.com, inc.
+* All rights reserved.
+* SPDX-License-Identifier: BSD-3-Clause
+* For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+*/
+-->
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <!--### Public/Global Attributes ###-->
+    <aura:attribute name="title" type="String" default="Flow" access="global" />
+    <aura:attribute name="iconName" type="String" default="standard:link" access="global" />
+    <aura:attribute name="flowName" type="String" access="global" />
+    <aura:attribute name="acceptedUrlParams" type="String" access="global" />
+    <aura:attribute name="includeCurrentUrl" type="Boolean" access="global" />
+
+    <!--### Private Attributes ###-->
+    <aura:attribute name="urlParams" type="String[]" access="private" />
+    <aura:attribute name="loading" type="Boolean" default="true" access="private" />
+    <aura:attribute name="missingFlow" type="Boolean" default="false" access="private" />
+
+    <!--### Event Handlers ###-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:card title="{!v.title}" iconName="{!v.iconName}">
+        <p class="slds-p-horizontal_small">
+            <aura:if isTrue="{!v.loading}">
+                <lightning:spinner alternativeText="Loading Flow" size="large" />
+                <aura:set attribute="else">
+                    <lightning:flow aura:id="flowId" />
+                </aura:set>
+            </aura:if>
+            <aura:if isTrue="{!v.missingFlow}">
+                    <lightning:icon iconName="utility:warning"
+                                    alternativeText="Warning!"
+                                    variant="warning"
+                                    size="medium" />
+                    Please Enter a Flow Name
+            </aura:if>
+        </p>
+    </lightning:card>
+</aura:component>

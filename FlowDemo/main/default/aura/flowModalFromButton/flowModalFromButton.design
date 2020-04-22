@@ -1,0 +1,12 @@
+<design:component label="Flow in Modal from Button">
+	<design:attribute name="recordId" label="Record Id" description="Set using '{!recordId}' when used from community"/>
+	<design:attribute name="buttonLabel" label="Button Label"/>
+    <design:attribute name="buttonVariant" label="Button Variant" datasource="base,neutral,brand,destructive,inverse,success" />
+	<design:attribute name="modalTitle" label="Modal Title"/>
+	<design:attribute name="modalSize" label="Modal Size" datasource="small,medium,large"/>
+	<design:attribute name="flowName" label="Flow Name (API)"/>
+	<design:attribute name="showHeader" label="Show Header"/>
+	<design:attribute name="showFooter" label="Show Footer"/>
+	<design:attribute name="refreshRecord" label="Refresh Record" description="Call Refresh Record when flow finishes"/>
+	<design:attribute name="refreshRecordDelay" label="Refresh Record Delay" description="Delay from when flow finishes to the refresh record is called"/>
+</design:component>

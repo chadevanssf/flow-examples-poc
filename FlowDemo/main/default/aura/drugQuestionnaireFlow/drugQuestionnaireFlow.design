@@ -1,0 +1,5 @@
+<design:component label="Drug Questionnaire">
+	<design:attribute name="recordId" label="Case Id" />
+    <design:attribute name="progressive" label="Progressive Questions" />
+    <design:attribute name="myquestions" label="Question Responses Output"/>
+</design:component>
