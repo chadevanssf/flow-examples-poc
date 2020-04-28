@@ -1,0 +1,13 @@
+<template>
+    <lightning-layout horizontal-align="spread" multiple-rows="true">
+        <template for:each={displayItems} for:item="item">
+            <lightning-layout-item key={item.id} padding="around-small" size={itemSize}>
+                <lightning-input type="text"
+                    label={item.label}
+                    value={item.value}
+                    onchange={handleInputChange}>
+                </lightning-input>
+            </lightning-layout-item>    
+        </template>
+    </lightning-layout>
+</template>
